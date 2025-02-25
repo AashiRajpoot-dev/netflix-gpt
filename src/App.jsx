@@ -1,5 +1,12 @@
-function App() {
-  return <h1 className="font-bold">Hello from App</h1>;
+import React from 'react';
+import Body from './components/Body'
+
+const App = () => {
+  return (
+    <div>
+      <Body />
+    </div>
+  )
 }
 
-export default App;
+export default App
