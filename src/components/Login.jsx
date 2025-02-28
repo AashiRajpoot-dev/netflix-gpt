@@ -4,12 +4,14 @@ import { checkValidate } from "../utils/validate";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
 import { addUser } from "../utils/userSlice";
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -46,7 +48,7 @@ const Login = () => {
 
           updateProfile(user, {
             displayName: username.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/198248722?v=4",
+            photoURL: "https://static.vecteezy.com/system/resources/thumbnails/000/439/863/small/Basic_Ui__28186_29.jpg",
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -58,7 +60,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              navigate("/browse");
             })
             .catch((error) => {
               setErrorMessage(error.message);
@@ -91,7 +92,7 @@ const Login = () => {
     <>
       <Header />
       <div className="absolute">
-        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/0cf2c109-3af1-4a9d-87d7-aecfac5fe881/web/IN-en-20250217-TRIFECTA-perspective_c3376e06-9aff-4657-aafb-91256a597b7c_large.jpg" />
+        <img src="" />
       </div>
       <form className="absolute p-12 bg-black w-3/12 my-36 mx-auto right-0 left-0 text-white rounded-lg opacity-80">
         <h1 className="font-bold text-3xl py-4">
