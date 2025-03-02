@@ -4,6 +4,7 @@ import { checkValidate } from "../utils/validate";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import {BG_URL} from '../utils/constant'
 
 import {
   createUserWithEmailAndPassword,
@@ -92,7 +93,7 @@ const Login = () => {
     <>
       <Header />
       <div className="absolute">
-        {/* <img src="" /> */}
+          <img src={BG_URL} />
       </div>
       <form className="absolute p-12 bg-black w-3/12 my-36 mx-auto right-0 left-0 text-white rounded-lg opacity-80">
         <h1 className="font-bold text-3xl py-4">
